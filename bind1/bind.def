@@ -1,0 +1,10 @@
+subDir:  [lib1] ./lib1
+include: lib1.h
+
+beginBinding:
+
+funcF( int * |in out|, STRING |in|, int )       --> int # typedef support!
+sumArray( INT_ARRAY |in out :2|, unsigned int ) --> int
+getSize()                                       --> int
+getString( char * |out :2|, int |DUMMY| )       --> void
+getString2( char ** |out !0| )                  --> size_t
