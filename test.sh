@@ -12,5 +12,7 @@ binding . bbind_compile
 binding . bbind_start
 
 binding . funcF "4" "Hello World" "3"
+binding . funcF "$OUT_2" "Hello World" "3"
+binding . sumArray "4 3 2 500 666000" "5"
 
 binding destruct
