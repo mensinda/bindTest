@@ -2,6 +2,26 @@
 #include <stdio.h>
 #include "string.h"
 
+struct testStruct {
+  int i;
+};
+
+struct testStruct *newTestStruct() {
+  struct testStruct *s = malloc( sizeof( struct testStruct ) );
+  s->i = 6;
+  return s;
+}
+
+void freeTestStruct( struct testStruct *_s ) {
+  if ( _s == NULL )
+    return;
+
+  printf( "Freeing testStruct %p\n", _s );
+  free( _s );
+}
+
+void printTestStruct( struct testStruct *_s ) { printf( "S->i = %i\n", _s->i ); }
+
 int funcF( int *p, STRING s, int i ) {
   printf( "1: %s: %i\n", s, *p );
   *p *= i;

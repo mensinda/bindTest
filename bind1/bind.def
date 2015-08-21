@@ -1,7 +1,15 @@
 subDir:  [lib1] ./lib1
 include: lib1.h
 
+beginCallback:
+
+int ( *cbFunc )( int, int )
+
 beginBinding:
+
+struct testStruct *newTestStruct()
+void               freeTestStruct(  struct testStruct * )
+void               printTestStruct( struct testStruct * )
 
 int    funcF( int * |in out|, STRING |in|, int )
 int    sumArray( INT_ARRAY |in out :2|, unsigned int )
