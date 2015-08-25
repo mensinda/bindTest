@@ -22,6 +22,11 @@ msg1 "Testing Pointers"
 binding . newTestStruct
 PTR="$OUT_0"
 binding . printTestStruct "$PTR"
+
+msg1 "Testing function pointes (callbacks)"
+binding . setFPTR "$PTR" "asd"
+binding . call    "$PTR" "2" "5"
+
 binding . freeTestStruct  "$PTR"
 
 binding destruct

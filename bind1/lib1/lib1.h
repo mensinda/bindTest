@@ -13,6 +13,8 @@ typedef int ( *cbFunc )( int, int );
 struct testStruct *newTestStruct();
 void freeTestStruct( struct testStruct *_s );
 
+void setFPTR( struct testStruct *_s, cbFunc _fptr );
+void call( struct testStruct *_s, int _i, int _j );
 void printTestStruct( struct testStruct *_s );
 
 int funcF( int *p, STRING s, int i );

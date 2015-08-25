@@ -4,6 +4,8 @@ class Bind1 BASHBinding
   public:
     :: newTestStruct
     :: freeTestStruct
+    :: setFPTR
+    :: call
     :: printTestStruct
 
     :: funcF
