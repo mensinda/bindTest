@@ -27,6 +27,8 @@ msg1 "Testing Pointers"
 binding . newTestStruct
 PTR="$OUT_0"
 binding . printTestStruct "$PTR"
+binding . getString2
+msg2 "OUT: $OUT_1"
 
 msg1 "Testing function pointes (callbacks)"
 binding . setFPTR "$PTR" "bashCB"
