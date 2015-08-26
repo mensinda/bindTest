@@ -1,5 +1,10 @@
 #!/bin/bash
 
+bashCB() {
+  msg1 "BASH Callback: $2, $3"
+  $1 $(( $2 * $3 ))
+}
+
 source "$(dirname "$0")/utils/loader.sh"
 loadBashUtils
 
@@ -24,7 +29,7 @@ PTR="$OUT_0"
 binding . printTestStruct "$PTR"
 
 msg1 "Testing function pointes (callbacks)"
-binding . setFPTR "$PTR" "asd"
+binding . setFPTR "$PTR" "bashCB"
 binding . call    "$PTR" "2" "5"
 
 binding . freeTestStruct  "$PTR"
